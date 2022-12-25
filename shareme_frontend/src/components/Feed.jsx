@@ -24,7 +24,6 @@ const Feed = () => {
       client.fetch(feedQuery).then((data)=>{
         setPins(data)
         setLoading(false)
-        console.log('worked')
       })
     }
   }, [categoryId])
@@ -33,7 +32,7 @@ const Feed = () => {
 
   return (
     <div>
-      {pins && <MasonryLayout/>}
+      {pins && <MasonryLayout pins={pins}/>}
     </div>
   )
 }
